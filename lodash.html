@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clonagem com Lodash</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+</head>
+<body>
+    <p id="objeto"></p>
+    <script>
+        const usuario = { nome: "João", idade: 25, cidade: "São Paulo" };
+        const novoUsuario = _.cloneDeep(usuario);
+        novoUsuario.idade = 30;
+        document.getElementById("objeto").innerText = `Usuário original: ${JSON.stringify(usuario)} \n Novo usuário: ${JSON.stringify(novoUsuario)}`;
+    </script>
+</body>
+</html>
